@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+   Email Service Login
+   </head>
+<body>
+<form th:action='@{/login}' method='post'>
+<div>
+<label>Username:</label>
+<input type="text" name="username" /><br/>
+<label>Password:</label>
+<input type="password" name="password" />
+</div>
+<input type="submit" value="Login"/>
+</form>
+</body>
+</html>

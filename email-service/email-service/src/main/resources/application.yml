@@ -1,0 +1,35 @@
+server:
+  port: 8188  
+  
+  server:
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: anchal29
+    key-store-type: JKS
+    key-alias: sms
+    key-password: anchal29
+     
+  
+eureka:        
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+  
+spring:   
+  application:
+    name: email-service  
+      
+management:
+  security:
+    enabled: false 
+  
+logging:
+  level:
+    com.sms.emailservice: DEBUG
